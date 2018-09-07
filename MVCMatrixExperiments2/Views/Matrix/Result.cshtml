@@ -1,0 +1,14 @@
+﻿@model MVCMatrixExperiments2.Models.TwoByTwoMatrix
+
+@{
+    ViewBag.Title = "Result";
+}
+
+<div>
+    The resulting matrix is:
+</div>
+<div>
+    <p>@Model.Element00 @Model.Element01</p>
+    <p>@Model.Element10 @Model.Element11</p>
+</div>
+@Html.ActionLink("Return to home page", "Index", "Home")

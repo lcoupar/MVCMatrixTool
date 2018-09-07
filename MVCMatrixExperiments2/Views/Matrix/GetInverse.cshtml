@@ -1,0 +1,23 @@
+﻿@model MVCMatrixExperiments2.Models.TwoByTwoMatrix
+
+@{
+    ViewBag.Title = "Get Inverse";
+}
+
+<h1>
+    Get Inverse 
+</h1>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <h3>Input matrix</h3>
+        <p>@Html.ValidationMessageFor(m => m.Element00)</p>
+        <p>@Html.ValidationMessageFor(m => m.Element01)</p>
+        <p>@Html.ValidationMessageFor(m => m.Element10)</p>
+        <p>@Html.ValidationMessageFor(m => m.Element11)</p>
+        <p>@Html.EditorFor(m => m.Element00) @Html.EditorFor(m => m.Element01)</p>
+        <p>@Html.EditorFor(m => m.Element10) @Html.EditorFor(m => m.Element11)</p>
+        <input type="submit" value="Get Inverse" />
+    }
+</div>

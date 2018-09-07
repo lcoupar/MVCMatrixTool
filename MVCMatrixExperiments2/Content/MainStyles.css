@@ -1,0 +1,5 @@
+﻿body { background-color: #B2F6F4; }
+a { color: #0F4400; }
+
+.field-validation-error { color: #900000; }
+.input-validation-error { border: 1px solid #900000; background-color: #fee; }

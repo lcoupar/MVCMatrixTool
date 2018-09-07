@@ -1,0 +1,37 @@
+﻿@model MVCMatrixExperiments2.Models.TwoByTwoMatrix[]
+
+@{
+    Layout = "~/Views/_MainLayout.cshtml";
+}
+
+@RenderBody()
+
+<h1>
+    @ViewBag.Title
+</h1>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <h3>First input matrix</h3>
+            <p>@Html.ValidationMessageFor(m => m[0].Element00)</p>
+            <p>@Html.ValidationMessageFor(m => m[0].Element01)</p>
+            <p>@Html.ValidationMessageFor(m => m[0].Element10)</p>
+            <p>@Html.ValidationMessageFor(m => m[0].Element11)</p>
+            <p>@Html.EditorFor(m => m[0].Element00) @Html.EditorFor(m => m[0].Element01)</p>
+            <p>@Html.EditorFor(m => m[0].Element10) @Html.EditorFor(m => m[0].Element11)</p>
+        </div>
+        <br />
+        <div>
+            <h3>Second input matrix</h3>
+            <p>@Html.ValidationMessageFor(m => m[1].Element00)</p>
+            <p>@Html.ValidationMessageFor(m => m[1].Element01)</p>
+            <p>@Html.ValidationMessageFor(m => m[1].Element10)</p>
+            <p>@Html.ValidationMessageFor(m => m[1].Element11)</p>
+            <p>@Html.EditorFor(m => m[1].Element00) @Html.EditorFor(m => m[1].Element01)</p>
+            <p>@Html.EditorFor(m => m[1].Element10) @Html.EditorFor(m => m[1].Element11)</p>
+        </div>
+        <input type="submit" value="@ViewBag.Title" />
+    }
+</div>
